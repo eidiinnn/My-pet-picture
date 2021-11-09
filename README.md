@@ -13,7 +13,7 @@ Install modules and start Docker.
 npm i 
 docker-compose up -d  
 ```
-if it's not the first time running this project you need to change this in `docker-compose.yml`.
+If it's not the first time running this project you need to change this in `docker-compose.yml`.
 ```
 #command: "npm run pets"
 command: "npm run dev"
