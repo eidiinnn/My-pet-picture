@@ -1,0 +1,24 @@
+{
+  "name": "pet-picture",
+  "version": "1.0.0",
+  "description": "show a cute pet image.",
+  "main": "src/model/index.js",
+  "scripts": {
+    "dev": "nodemon .",
+    "pets": "node ./start/create-pets.js",
+    "postpets": "nodemon ."
+  },
+  "author": "Eduardo da Silva",
+  "license": "ISC",
+  "dependencies": {
+    "@types/jest": "^27.0.2",
+    "ejs": "^3.1.6",
+    "express": "^4.17.1",
+    "express-fileupload": "^1.2.1",
+    "filehound": "^1.17.5",
+    "mongoose": "^6.0.10",
+    "nodemon": "^2.0.14",
+    "swearjar-extended2": "^0.2.9",
+    "uuid": "^8.3.2"
+  }
+}

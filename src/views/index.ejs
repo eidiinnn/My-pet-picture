@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/index.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;500&display=swap"
+      rel="stylesheet"
+    />
+    <title>My pet picture</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="title">
+        <img class="pets" src="/svg/pets.svg" />
+        <h1>My pet picture</h1>
+      </div>
+      <div class="container-img">
+        <div class="name-date">
+          <h2><%= pet.name %></h2>
+          <div class="date">
+            <img class="clock" src="/svg/clock.svg" />
+            <%=
+            `${pet.date.getFullYear()}/${pet.date.getMonth()+1}/${pet.date.getDate()}`
+            %>
+          </div>
+        </div>
+        <div class="img-pet">
+          <img class="img" src=<%=`/img/${pet.file}` %>>
+        </div>
+      </div>
+      <button id="modalButton" class="upload-button">Upload a Picture</button>
+    </div>
+
+    <div id="modal" class="modal">
+      <div class="containerModal">
+        <form
+          ref="uploadForm"
+          id="form"
+          action="/upload"
+          method="post"
+          encType="multipart/form-data"
+        >
+          Pet name:
+          <input type="text" name="name" class="input" />
+          <div class="fileUpload">
+            <input type="file" name="image" id="file" class="file" />
+            <button class="uploadButton">Upload</button>
+          </div>
+        </form>
+        <button class="modalClose">close</button>
+      </div>
+    </div>
+
+    <script src="js/modal.js"></script>
+  </body>
+</html>
