@@ -1,6 +1,8 @@
 # :cat: My pet picture :dog:
 Show a random pet picture and you can upload photos.
 
+<img src="https://i.imgur.com/o4xQrCK.png" alt="screenshot" width="800"/>
+
 ## Usage with docker
 Create a file named `mongodb.json` in `src/model/database` and put it:
 ```
